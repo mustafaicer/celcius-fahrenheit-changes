@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-float celciusToFahrenheit(float);
-float fahrenheitToCelcius(float);
+float celsiusToFahrenheit(float);
+float fahrenheitToCelsius(float);
 
 int main()
 {
     char choose;
     float number;
-    printf("Fahrenheit -> Celcius (F)\n");
-    printf("Celcius -> Fahrenheit (C)\n");
+    printf("Fahrenheit -> Celsius (F)\n");
+    printf("Celsius -> Fahrenheit (C)\n");
     printf("Your choose : ");
     scanf("%c",&choose);
     switch(choose)
@@ -17,12 +17,12 @@ int main()
         case 'F':
             printf("Please enter Fahrenheit : ");
             scanf("%f",&number);
-            printf("%.3f Fahrenheit = %.3f Celcius",number, fahrenheitToCelcius(number));
+            printf("%.3f Fahrenheit = %.3f Celsius",number, fahrenheitToCelsius(number));
             break;
         case 'C':
-            printf("Please enter Celcius : ");
+            printf("Please enter Celsius : ");
             scanf("%f",&number);
-            printf("%.3f Celcius = %.3f Fahrenheit",number, celciusToFahrenheit(number));
+            printf("%.3f Celsius = %.3f Fahrenheit",number, celsiusToFahrenheit(number));
             break;
         default:
             printf("Please don't do this..");
@@ -30,16 +30,16 @@ int main()
     return 0;
 }
 
-float celciusToFahrenheit(float x)
+float celsiusToFahrenheit(float x)
 {
     float Fahrenheit = 0;
     Fahrenheit = (x * 9/ 5) + 32;
     return Fahrenheit;
 }
 
-float fahrenheitToCelcius(float x)
+float fahrenheitToCelsius(float x)
 {
-    float Celcius = 0;
-    Celcius = (x-32) * 5 / 9;
-    return Celcius;
+    float Celsius = 0;
+    Celsius = (x-32) * 5 / 9;
+    return Celsius;
 }
